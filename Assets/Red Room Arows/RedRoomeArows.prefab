@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33939938945518186}
   - component: {fileID: 65456161188283102}
   - component: {fileID: 23487807782697002}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: RedRoomeArows
   m_TagString: Untagged
   m_Icon: {fileID: 0}

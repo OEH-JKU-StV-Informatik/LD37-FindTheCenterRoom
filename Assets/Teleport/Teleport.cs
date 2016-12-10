@@ -8,6 +8,7 @@ public class Teleport : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         DontDestroyOnLoad(transform.gameObject);
+   
     }
 	
 	// Update is called once per frame
@@ -19,7 +20,8 @@ public class Teleport : MonoBehaviour {
     {
         if(collision.gameObject.name == "TeleportA")
         {
-            SceneManager.LoadScene("test", LoadSceneMode.Single);
+            SceneManager.LoadScene("YellowRoom", LoadSceneMode.Single);
+           
         }
     }
 }
