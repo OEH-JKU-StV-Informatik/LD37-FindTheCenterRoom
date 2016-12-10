@@ -7,7 +7,6 @@ public class Teleport : MonoBehaviour {
 
     public bool justTeleported = false;
     public GameObject Playerspawner;
-
     private string randomString;
 
     // Use this for initialization
@@ -46,5 +45,8 @@ public class Teleport : MonoBehaviour {
             justTeleported = true;
 
         }
+        
+        if (collision.gameObject.GetComponent<Health>()) ;
+           
     }
 }
