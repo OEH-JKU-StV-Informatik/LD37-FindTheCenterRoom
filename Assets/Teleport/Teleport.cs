@@ -33,7 +33,7 @@ public class Teleport : MonoBehaviour {
                 randomString = "RedRoome";
                 break;
             case 2:
-                randomString = "test";
+                randomString = "BlueRoom";
                 break;
             default:
                 break;

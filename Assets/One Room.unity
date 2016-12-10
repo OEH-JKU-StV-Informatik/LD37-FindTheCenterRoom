@@ -351,6 +351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640ed92453b819045ba020cc17efc85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  justTeleported: 0
+  Playerspawner: {fileID: 0}
 --- !u!1 &361838134
 GameObject:
   m_ObjectHideFlags: 0
