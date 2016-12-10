@@ -20,7 +20,7 @@ public class Teleport : MonoBehaviour {
     {
         if(collision.gameObject.name == "TeleportA")
         {
-            SceneManager.LoadScene("Test", LoadSceneMode.Single);
+            SceneManager.LoadScene("RedRoome", LoadSceneMode.Single);
            
         }
     }
