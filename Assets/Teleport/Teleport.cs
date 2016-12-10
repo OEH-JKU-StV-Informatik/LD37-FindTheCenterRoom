@@ -7,10 +7,11 @@ public class Teleport : MonoBehaviour {
 
     public bool justTeleported = false;
     public GameObject Playerspawner;
-  
 
-	// Use this for initialization
-	void Start () {
+    private string randomString;
+
+    // Use this for initialization
+    void Start () {
         DontDestroyOnLoad(transform.gameObject);
    
     }
@@ -27,9 +28,20 @@ public class Teleport : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        switch((int)Random.Range(1, 3)) {
+            case 1:
+                randomString = "RedRoome";
+                break;
+            case 2:
+                randomString = "test";
+                break;
+            default:
+                break;
+        }
+     
         if(collision.gameObject.name == "TeleportA")
         { 
-            SceneManager.LoadScene("RedRoome", LoadSceneMode.Single);
+            SceneManager.LoadScene(randomString, LoadSceneMode.Single);
             justTeleported = true;
 
         }
