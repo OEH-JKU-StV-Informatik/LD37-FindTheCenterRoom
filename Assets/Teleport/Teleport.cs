@@ -41,11 +41,8 @@ public class Teleport : MonoBehaviour {
      
         if(collision.gameObject.name == "TeleportA")
         { 
-<<<<<<< HEAD
+
             SceneManager.LoadScene(randomString, LoadSceneMode.Single);
-=======
-            SceneManager.LoadScene("RedRoome", LoadSceneMode.Single);
->>>>>>> d5fcb8212ed6e09a2c72a0ed3986d8877d0ccccb
             justTeleported = true;
 
         }
