@@ -27,12 +27,15 @@ public class Teleport : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        switch((int)Random.Range(1, 3)) {
+        switch((int)Random.Range(1, 4)) {
             case 1:
                 randomString = "RedRoome";
                 break;
             case 2:
                 randomString = "BlueRoom";
+                break;
+            case 3:
+                randomString = "BrownRoom";
                 break;
             default:
                 break;
