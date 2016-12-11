@@ -336,6 +336,7 @@ MonoBehaviour:
   damageAmount: 34
   damage: 0
   HealthBar: {fileID: 630901279}
+  Playerspawner: {fileID: 0}
 --- !u!4 &314456435 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
@@ -348,11 +349,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 314456430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 640ed92453b819045ba020cc17efc85c, type: 3}
+  m_Script: {fileID: 11500000, guid: 79b2d930664b2aa4fba2d2925664da0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  justTeleported: 0
-  Playerspawner: {fileID: 0}
 --- !u!1 &361838134
 GameObject:
   m_ObjectHideFlags: 0
