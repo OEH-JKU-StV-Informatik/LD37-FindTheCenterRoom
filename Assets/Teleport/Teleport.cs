@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour {
 
-    public bool justTeleported = false;
+    public bool teleportOk = false;
     public GameObject Playerspawner;
     private string randomString;
 
@@ -17,11 +17,11 @@ public class Teleport : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (justTeleported)
+        Playerspawner = GameObject.Find("PlayerSpawner");
+        if (teleportOk)
         {
-            Playerspawner = GameObject.Find("PlayerSpawner");
             transform.position = Playerspawner.transform.position;
-            justTeleported = false;
+            teleportOk = false;
         }
     }
 
@@ -41,11 +41,11 @@ public class Teleport : MonoBehaviour {
                 break;
         }
      
-        if(collision.gameObject.name == "TeleportA")
-        { 
-
+        if(collision.gameObject.name == "TeleportPoint")
+        {
+            teleportOk = true;
             SceneManager.LoadScene(randomString, LoadSceneMode.Single);
-            justTeleported = true;
+            
 
         }
         
