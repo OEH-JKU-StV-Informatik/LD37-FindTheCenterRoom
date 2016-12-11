@@ -354,7 +354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b2d930664b2aa4fba2d2925664da0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  justTeleported: 0
   Playerspawner: {fileID: 0}
 --- !u!1 &361838134
 GameObject:
@@ -904,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 700, y: 36}
+  m_AnchoredPosition: {x: 117, y: 32}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630901279
