@@ -46,7 +46,7 @@ public class Teleport : MonoBehaviour {
 
         }
         
-        if (collision.gameObject.GetComponent<Health>()) ;
+
            
     }
 }

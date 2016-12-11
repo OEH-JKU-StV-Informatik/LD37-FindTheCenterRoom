@@ -146,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 123333576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1, y: 5.66, z: -7.07}
+  m_LocalPosition: {x: 16.58, y: 3.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -504,8 +504,8 @@ GameObject:
   - component: {fileID: 707633521}
   - component: {fileID: 707633520}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: DeathCube
+  m_TagString: deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -789,8 +789,8 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
   m_PrefabInternal: {fileID: 977320213}
---- !u!65 &977320215
-BoxCollider:
+--- !u!64 &977320217
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -799,8 +799,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020000005, y: 0.029016001, z: 0.019999998}
-  m_Center: {x: -3.637979e-12, y: -0.004508001, z: -9.313226e-10}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
 --- !u!4 &1093154032 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
@@ -816,10 +818,9 @@ GameObject:
   - component: {fileID: 1115211256}
   - component: {fileID: 1115211255}
   - component: {fileID: 1115211257}
-  - component: {fileID: 1115211258}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: DeathCube
+  m_TagString: deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,18 +892,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 31d0448f250781d4ca13b80378904eed, type: 3}
---- !u!114 &1115211258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115211253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4b45e7072ac4b46a1e16fd39f7ae0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadly: 1
 --- !u!1 &1169002760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,8 +1141,8 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
   m_PrefabInternal: {fileID: 1350521091}
---- !u!65 &1350521093
-BoxCollider:
+--- !u!64 &1350521095
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1162,26 +1151,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020000005, y: 0.029016001, z: 0.019999998}
-  m_Center: {x: -3.637979e-12, y: -0.004508001, z: -9.313226e-10}
---- !u!1 &1576540074 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100006, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
-  m_PrefabInternal: {fileID: 1749793319}
---- !u!64 &1576540075
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576540074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
 --- !u!1 &1610197337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,8 +1281,8 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
   m_PrefabInternal: {fileID: 1749793319}
---- !u!65 &1749793321
-BoxCollider:
+--- !u!64 &1749793321
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1318,8 +1291,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.029015996, z: 0.019999998}
-  m_Center: {x: 0, y: -0.004508, z: -9.313226e-10}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: aa1098e0bc9d1cd4e809d3a8b5d8fe38, type: 3}
 --- !u!1 &1848823601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,8 +1486,8 @@ GameObject:
   - component: {fileID: 2139762255}
   - component: {fileID: 2139762254}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: DeathCube
+  m_TagString: deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
