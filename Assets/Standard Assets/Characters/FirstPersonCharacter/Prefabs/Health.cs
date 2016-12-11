@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
@@ -48,11 +49,9 @@ public class Health : MonoBehaviour {
             HealthBar.value = health;
             Playerspawner = GameObject.Find("PlayerSpawner");
             transform.position = Playerspawner.transform.position;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         }
-        if (collision.gameObject.name == "TeleportA")
-        {
 
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
