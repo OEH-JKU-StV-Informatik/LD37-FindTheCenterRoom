@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class SpicksKill : MonoBehaviour
 {
-    public float timeLeft = 10;
-    public Rigidbody killer;
-    public float speed = 20;
+    private bool teleportedUP = true;
+    private bool teleportedDown = true;
+    public float time = 0;
+    public float prositonDown00 = 0;
+    public float prositonUp0 = 0;
+    public float prositonDown0 = 0;
+    public float prositonUp1 = 0;
+    public float prositonDown1 = 0;
+    public float prositonUp2 = 0;
+    public float prositonDown2 = 0;
+    public float prositonUp3 = 0;
+    public float prositonDown3 = 0;
+    public Transform positionUP;
+    public Transform positionDown;
+
     // Use this for initialization
     void Start()
     {
@@ -17,23 +29,78 @@ public class SpicksKill : MonoBehaviour
     void Update()
     {
 
-        timeLeft -= Time.deltaTime;
-        switch ((int) timeLeft)
+        time += Time.deltaTime;
+
+        if (time < prositonDown00)
         {
-            case (10):
-                {
-                  
-                }
-                break;
-            default:
-                
-                    
-                break;
-                ;
+            down();
+        }
+        else if (time < prositonUp0)
+        {
+            up();
+        }
+        else if (time < prositonDown0)
+        {
+            down();
+        }
+
+        else if (time < prositonUp1)
+        {
+            up();
+        }
+        else if (time < prositonDown1)
+        {
+            down();
+        }
+        else if (time < prositonUp2)
+        {
+            up();
+        }
+        else if (time < prositonDown2)
+        {
+            down();
+        }
+        else if (time < prositonUp3)
+        {
+            up();
+        }
+        else if (time < prositonDown3)
+        {
+            down();
+        }
+
+        else if (time > 120)
+        {
+            up();
+        }
+        else
+        {
+            down();
         }
     }
 
+    public void up()
+    {
+        if (teleportedUP)
+        {
+            transform.position = positionUP.transform.position;
+            teleportedUP = false;
+            teleportedDown = true;
+        }
+    }
 
-
+    public void down()
+    {
+        if (teleportedDown)
+        {
+            transform.position = positionDown.transform.position;
+            teleportedUP = true;
+            teleportedDown = false;
+        }
+    }
 }
+
+
+
+
 
