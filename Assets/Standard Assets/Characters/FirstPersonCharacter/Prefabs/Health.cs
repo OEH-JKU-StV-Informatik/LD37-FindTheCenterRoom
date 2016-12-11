@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
@@ -11,16 +12,31 @@ public class Health : MonoBehaviour {
     public bool damage = false;
     public Slider HealthBar;
     public GameObject Playerspawner;
-
+    public float time;
+    public bool countTime = false;
 
     // Use this for initialization
     void Start () {
         health = maxhealth;
     }
-	
-	// Update is called once per frame
-	void Update () {
 
+    // Update is called once per frame
+    void Update()
+    {
+        Playerspawner = GameObject.Find("PlayerSpawner");
+        if (countTime)
+        {
+            time += Time.deltaTime;
+            if (time > 0.5)
+            {
+                health -= damageAmount;
+                HealthBar.value = health;
+                Playerspawner = GameObject.Find("PlayerSpawner");
+                transform.position = Playerspawner.transform.position;
+                countTime = false;
+                time = 0;
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -33,11 +49,12 @@ public class Health : MonoBehaviour {
             HealthBar.value = health;
             Playerspawner = GameObject.Find("PlayerSpawner");
             transform.position = Playerspawner.transform.position;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         }
-        if (collision.gameObject.name == "TeleportA")
-        {
 
-        }
     }
-
- }
+    private void OnTriggerEnter(Collider other)
+    {
+        countTime = true;
+    }
+}
