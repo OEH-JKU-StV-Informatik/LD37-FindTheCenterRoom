@@ -26,11 +26,18 @@ public class Teleport : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        
-
-        if (collision.gameObject.name == "TeleportPoint")
+        if (collision.gameObject.name == "TeleportPointBonusRoom")
         {
+            SceneManager.LoadScene("BonusRoom", LoadSceneMode.Single);
+        }
+
+
+            if (collision.gameObject.name == "TeleportPoint")
+        {
+            if (pinkComplete && blueComplete && greenComplete && spikeComplete && redComplete && brownComplete && violetComplete)
+            {
+                randomString = "GoalRoom";
+            }
             switch ((int)Random.Range(1, 8))
             {
                 case 1:
@@ -98,6 +105,15 @@ public class Teleport : MonoBehaviour {
         transform.position = Playerspawner.transform.position;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "win")
+        {
+            SceneManager.LoadScene("MainMenuWin", LoadSceneMode.Single);
+            Destroy(gameObject);
 
-    
+        }
+    }
+
+
 }

@@ -603,7 +603,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1286352067871458, guid: 5f6d99f0c0a468643bf702de853b3430, type: 2}
       propertyPath: m_Name
-      value: TeleportPoint
+      value: TeleportPointBonusRoom
       objectReference: {fileID: 0}
     - target: {fileID: 4815665129663212, guid: 5f6d99f0c0a468643bf702de853b3430, type: 2}
       propertyPath: m_LocalScale.y

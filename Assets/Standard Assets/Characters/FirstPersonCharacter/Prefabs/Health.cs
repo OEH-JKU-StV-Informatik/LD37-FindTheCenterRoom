@@ -23,6 +23,11 @@ public class Health : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(health <= 0)
+        {
+            SceneManager.LoadScene("MainMenuLoose", LoadSceneMode.Single);
+            Destroy(gameObject);
+        }
         Playerspawner = GameObject.Find("PlayerSpawner");
         if (countTime)
         {

@@ -141,6 +141,32 @@ ModelImporter:
     4300046: Cone.022
     4300048: Cone.023
     4300050: Cone.024
+    6400000: Cone
+    6400002: Cone.001
+    6400004: Cone.002
+    6400006: Cone.003
+    6400008: Cone.004
+    6400010: Cone.005
+    6400012: Cone.006
+    6400014: Cone.007
+    6400016: Cone.008
+    6400018: Cone.009
+    6400020: Cone.010
+    6400022: Cone.011
+    6400024: Cone.012
+    6400026: Cone.013
+    6400028: Cone.014
+    6400030: Cone.015
+    6400032: Cone.016
+    6400034: Cone.017
+    6400036: Cone.018
+    6400038: Cone.019
+    6400040: Cone.020
+    6400042: Cone.021
+    6400044: Cone.022
+    6400046: Cone.023
+    6400048: Cone.024
+    6400050: Plane
   materials:
     importMaterials: 1
     materialName: 0
@@ -167,7 +193,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
