@@ -22,6 +22,7 @@ public class Health : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Playerspawner = GameObject.Find("PlayerSpawner");
         if (countTime)
         {
             time += Time.deltaTime;
