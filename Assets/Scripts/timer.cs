@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
 
     public float time;
     public string minutes;
     public string seconds;
+    public Text timeText;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,5 +20,9 @@ public class timer : MonoBehaviour {
         minutes = Mathf.Floor(time / 60).ToString("00");
         seconds = (time % 60).ToString("00");
 
+    }
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 250, 100), minutes + ":" + seconds);
     }
 }

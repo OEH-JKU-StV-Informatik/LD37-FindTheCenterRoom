@@ -7,7 +7,7 @@ public class MenuControls : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GoalRoom", LoadSceneMode.Single);
+        SceneManager.LoadScene("StartingRoom", LoadSceneMode.Single);
     }
 
     public void ExitGame()
