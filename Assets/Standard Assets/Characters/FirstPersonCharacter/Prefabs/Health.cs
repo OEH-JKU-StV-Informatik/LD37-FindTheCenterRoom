@@ -6,36 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
-    public int maxhealth = 100;
-    public int health = 100;
-    public int damageAmount = 34;
+    
     public bool damage = false;
     public Slider HealthBar;
     public GameObject Playerspawner;
     public float time;
     public bool countTime = false;
+    public int killconter;
 
     // Use this for initialization
-    void Start () {
-        health = maxhealth;
+    void Start () {   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
-        {
-            SceneManager.LoadScene("MainMenuLoose", LoadSceneMode.Single);
-            Destroy(gameObject);
-        }
         Playerspawner = GameObject.Find("PlayerSpawner");
         if (countTime)
         {
             time += Time.deltaTime;
             if (time > 0.5)
-            {
-                health -= damageAmount;
-                HealthBar.value = health;
+            {            
                 Playerspawner = GameObject.Find("PlayerSpawner");
                 transform.position = Playerspawner.transform.position;
                 countTime = false;
@@ -43,23 +34,26 @@ public class Health : MonoBehaviour {
             }
         }
     }
-
     void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.tag == "deadly")
         {
-            
-            health -= damageAmount;
-            HealthBar.value = health;
+            killconter += 1;
             Playerspawner = GameObject.Find("PlayerSpawner");
             transform.position = Playerspawner.transform.position;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+            
         }
 
     }
     private void OnTriggerEnter(Collider other)
     {
         countTime = true;
+    }
+
+    void OnGUI()
+    {
+    
+            GUI.Label(new Rect(0.0f, 0.0f, 128.0f, 32.0f), killconter.ToString());
     }
 }

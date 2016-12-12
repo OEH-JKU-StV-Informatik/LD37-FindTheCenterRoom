@@ -9,9 +9,10 @@ public class Teleport : MonoBehaviour {
     public GameObject Playerspawner;
     private string randomString;
     public bool pinkComplete, redComplete, brownComplete, blueComplete, violetComplete, spikeComplete, greenComplete;
-    
+    public GameObject Canvas;
+    public GameObject PauseMenu;
 
-  
+
 
     // Use this for initialization
     void Start () {
@@ -38,59 +39,101 @@ public class Teleport : MonoBehaviour {
             {
                 randomString = "GoalRoom";
             }
-            switch ((int)Random.Range(1, 8))
+            else
             {
-                case 1:
-                    if (pinkComplete == false)
+                bool otherRoom = false;
+                do
+                {
+                    switch ((int)Random.Range(1, 8))
                     {
-                        randomString = "RedRoome";
-                        pinkComplete = true;
+                        case 1:
+                            if (pinkComplete == false)
+                            {
+                                randomString = "RedRoome";
+                                pinkComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        case 2:
+                            if (blueComplete == false)
+                            {
+                                randomString = "BlueRoom";
+                                blueComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        case 3:
+                            if (brownComplete == false)
+                            {
+                                randomString = "BrownRoom";
+                                brownComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        case 4:
+                            if (violetComplete == false)
+                            {
+                                randomString = "VioletRoom";
+                                violetComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        case 5:
+                            if (pinkComplete == false)
+                            {
+                                randomString = "PinkRoom";
+                                pinkComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        case 6:
+                            if (spikeComplete == false)
+                            {
+                                randomString = "SpickRoom";
+                                spikeComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        case 7:
+                            if (greenComplete == false)
+                            {
+                                randomString = "GreenRoom";
+                                greenComplete = true;
+                                otherRoom = false;
+                            }
+                            else
+                            {
+                                otherRoom = true;
+                            }
+                            break;
+                        default:
+                            break;
                     }
-                    break;
-                case 2:
-                    if (blueComplete == false)
-                    {
-                        randomString = "BlueRoom";
-                        blueComplete = true;
-                    }
-                    break;
-                case 3:
-                    if (brownComplete == false)
-                    {
-                        randomString = "BrownRoom";
-                        brownComplete = true;
-                    }
-                    break;
-                case 4:
-                    if (violetComplete == false)
-                    {
-                        randomString = "VioletRoom";
-                        violetComplete = true;
-                    }
-                    break;
-                case 5:
-                    if (pinkComplete == false)
-                    {
-                        randomString = "PinkRoom";
-                        pinkComplete = true;
-                    }
-                    break;
-                case 6:
-                    if (spikeComplete == false)
-                    {
-                        randomString = "SpickRoom";
-                        spikeComplete = true;
-                    }
-                    break;
-                case 7:
-                    if (greenComplete == false)
-                    {
-                        randomString = "GreenRoom";
-                        greenComplete = true;
-                    }
-                    break;
-                default:
-                    break;
+                } while (otherRoom);
             }
             SceneManager.LoadScene(randomString, LoadSceneMode.Single);
             
@@ -103,6 +146,7 @@ public class Teleport : MonoBehaviour {
     {
         Playerspawner = GameObject.Find("PlayerSpawner");
         transform.position = Playerspawner.transform.position;
+        transform.rotation = Playerspawner.transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -111,8 +155,10 @@ public class Teleport : MonoBehaviour {
         {
             SceneManager.LoadScene("MainMenuWin", LoadSceneMode.Single);
             Destroy(gameObject);
-
-        }
+            Destroy(Canvas);
+            Destroy(PauseMenu);
+           
+}
     }
 
 
