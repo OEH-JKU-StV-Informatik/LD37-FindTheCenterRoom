@@ -27,10 +27,8 @@ public class Teleport : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "TeleportPointBonusRoom")
-        {
-            SceneManager.LoadScene("BonusRoom", LoadSceneMode.Single);
-        }
+
+
 
 
             if (collision.gameObject.name == "TeleportPoint")
@@ -47,10 +45,10 @@ public class Teleport : MonoBehaviour {
                     switch ((int)Random.Range(1, 8))
                     {
                         case 1:
-                            if (pinkComplete == false)
+                            if (redComplete == false)
                             {
                                 randomString = "RedRoome";
-                                pinkComplete = true;
+                                redComplete = true;
                                 otherRoom = false;
                             }
                             else
@@ -146,7 +144,7 @@ public class Teleport : MonoBehaviour {
     {
         Playerspawner = GameObject.Find("PlayerSpawner");
         transform.position = Playerspawner.transform.position;
-        transform.rotation = Playerspawner.transform.rotation;
+ 
     }
 
     private void OnTriggerEnter(Collider other)

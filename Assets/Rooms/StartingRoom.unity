@@ -851,7 +851,7 @@ MonoBehaviour:
   Playerspawner: {fileID: 0}
   time: 0
   countTime: 0
-  killconter: 0
+  killcounter: 0
 --- !u!1 &963068315 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1843105993811966, guid: 5f6d99f0c0a468643bf702de853b3430,
