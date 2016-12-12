@@ -15,6 +15,14 @@ public class MenuControls : MonoBehaviour {
     {
         SceneManager.LoadScene("StartingRoom", LoadSceneMode.Single);
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("credit", LoadSceneMode.Single);
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
 
     public void ExitGame()
     {
