@@ -12,7 +12,8 @@ public class Health : MonoBehaviour {
     public GameObject Playerspawner;
     public float time;
     public bool countTime = false;
-    public int killconter;
+    public int killcounter;
+    private int counter = 0;
 
     // Use this for initialization
     void Start () {   
@@ -29,6 +30,7 @@ public class Health : MonoBehaviour {
             {            
                 Playerspawner = GameObject.Find("PlayerSpawner");
                 transform.position = Playerspawner.transform.position;
+   
                 countTime = false;
                 time = 0;
             }
@@ -36,13 +38,15 @@ public class Health : MonoBehaviour {
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "deadly")
-        {
-            killconter += 1;
+
+        if (collision.gameObject.tag == "deadly") {
+            killcounter += 1;
             Playerspawner = GameObject.Find("PlayerSpawner");
-            transform.position = Playerspawner.transform.position;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+            transform.position = Playerspawner.transform.position;
             
+
+
         }
 
     }
@@ -53,7 +57,7 @@ public class Health : MonoBehaviour {
 
     void OnGUI()
     {
-    
-            GUI.Label(new Rect(0.0f, 0.0f, 128.0f, 32.0f), killconter.ToString());
+
+        GUI.Label(new Rect(0.0f, 0.0f, 128.0f, 32.0f), "Deaths: " + killcounter.ToString());
     }
 }

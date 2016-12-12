@@ -23,6 +23,6 @@ public class timer : MonoBehaviour {
     }
     private void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 250, 100), minutes + ":" + seconds);
+        GUI.Label(new Rect(10, 12, 250, 100), minutes + ":" + seconds);
     }
 }
