@@ -8,9 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Rooms/MainMenu.unity
   - enabled: 1
-    path: Assets/Rooms/RedRoome.unity
+    path: Assets/Rooms/MainMenuWin.unity
+  - enabled: 1
+    path: Assets/credit.unity
   - enabled: 1
     path: Assets/Rooms/SpickRoom.unity
+  - enabled: 1
+    path: Assets/Rooms/RedRoome.unity
   - enabled: 1
     path: Assets/Rooms/GoalRoom.unity
   - enabled: 1
@@ -19,8 +23,6 @@ EditorBuildSettings:
     path: Assets/Rooms/BrownRoom.unity
   - enabled: 1
     path: Assets/Rooms/BlueRoom.unity
-  - enabled: 1
-    path: Assets/Rooms/MainMenuWin.unity
   - enabled: 1
     path: Assets/Rooms/StartingRoom.unity
   - enabled: 1
